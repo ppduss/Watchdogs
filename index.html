@@ -7,26 +7,19 @@
 <!-- </script type="text/javascript" src="./lightbox.js"> -->
   <title>Watchdog</title>
   <script>
+
     function openLightbox() {
-    setTimeout(() => {
       document.getElementById("mylightbox").style.display = "contents";
-    }, 3000);
     };
-
     function closeLightbox() {
-    setTimeout(() => {
       document.getElementById("mylightbox").style.display = "none";
-      }, 1000);
     };
 
-    function stopLightbox() {
-      clearTimeout(openLightbox);
-    }
   </script>
 </head>
 
 <body>
-  <section id="container" onmouseover="openLightbox()" onmouseout="stopLightbox()">
+  <section id="container" onmouseover="timer = setTimeout(openLightbox, 1500)" onmouseout="clearTimeout(timer)">
     <img class="frame1"src="./main.png" alt="">
     <div class="frame1_trans">
       <img class="frame1_black" src="./Rectangle.png" alt="">
@@ -48,11 +41,11 @@
     <img class="roll" src="./rollbutton.png" alt="">
   </section>
 
-   <section class="mylightbox" id="mylightbox" onmouseout="closeLightbox()">
+  <section class="mylightbox" id="mylightbox" onmouseout="timer = setTimeout(closeLightbox, 1000)" onmouseover="clearTimeout(timer)">
     <img src="./lightbox_main.png" alt="">
-    <!-- <img class="watchdogs_lg" src="./watchdogs_lg.png" alt=""> -->
-    <!-- <img class="close" src="./close.png" alt=""> -->
-   </section >
+    <img class="watchdogs_lg" src="./watchdogs_lg.png" alt="">
+    <img class="close" src="./close.png" alt="">
+  </section >
 
 </body>
 </html>
