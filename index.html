@@ -4,10 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-<!-- </script type="text/javascript" src="./lightbox.js"> -->
   <title>Watchdog</title>
   <script>
-
     function openLightbox() {
       document.getElementById("mylightbox").style.display = "inherit";
     };
@@ -18,35 +16,32 @@
 </head>
 
 <body>
-  <section id="container" onmouseover="timer = setTimeout(openLightbox, 1500)" onmouseout="clearTimeout(timer)">
-    <img class="frame1"src="./main.png" alt="">
+  <section class="container" onmouseover="timer = setTimeout(openLightbox, 1500)" onmouseout="clearTimeout(timer)">
+    <img class="static-bg"src="./main.png" alt="Main">
     <div class="frame1_trans">
-      <img class="frame1_black" src="./Rectangle.png" alt="">
-      <img class="frame1_txt" src="./Frame1_txt.png" alt="">  
+      <img class="frame1_black" src="./Frame1_Rectangle.png" alt="Rectangle">
+      <img class="frame1_txt" src="./Frame1_txt.png" alt="Txt">  
     </div>
-    <div class="thisonemakesyousmaller">
+    <div class="frame2_shrink">
       <div class="frame2_trans">
-        <img class="frame2_face" src="./face.png" alt="">
-        <img class="frame2_message" src="./message.png" alt="">  
+        <img class="frame2_face" src="./Frame2_face.png" alt="Face">
+        <img class="frame2_message" src="./Frame2_message.png" alt="Message">  
       </div>
     </div>
-    <div class="frame3_temp">
-      <img class="frame3" src="./watchdogs.png" alt="">
-      <img class="frame3_hacking" src="./hacking.png" alt="">
+    <div class="frame3_trans">
+      <img class="frame3" src="./Frame3_watchdogs.png" alt="Watchdogs">
+      <img class="frame3_hacking" src="./Frame3_hacking.png" alt="Hacking">
     </div>
-    <img class="frame3_ubisoft" src="./ubisoft.png" alt="">
-    <!-- <div class="frame4"></div> -->
-    <img class="frame4" src="./frame4.png" alt="">
-    <img class="button" src="./rollbutton.png" alt="">
+    <img class="frame3_ubisoft" src="./Frame3_ubisoft.png" alt="Ubisoft">
+    <img class="frame4_dvd" src="./Frame4_DVD.png" alt="DVD">
+    <img class="frame4_button" src="./Frame4_button.png" alt="Roll Over">
   </section>
 
-  <section class="mylightbox" id="mylightbox" onmouseout="timer = setTimeout(closeLightbox, 1000)" onmouseover="clearTimeout(timer)">
-    <!-- <div class=""> -->
-      <img class="lightbox--main" src="./lightbox_main3.png" alt="">
-      <img class="watchdogs__lightbox" src="./watchdogs_lg.png" alt="">
-      <img class="button--pre-order" src="./pre-order.png" alt="">
-      <img class="close" id="grow" src="./close.png" alt="" onclick="closeLightbox()">
-    <!-- </div> -->
+  <section class="ltbx" id="mylightbox" onmouseout="timer = setTimeout(closeLightbox, 1000)" onmouseover="clearTimeout(timer)">
+      <img class="ltbx_static" src="./lightbox_main3.png" alt="Lightbox main">
+      <img class="ltbx_watchdogs" src="./watchdogs_lg.png" alt="Watchdogs">
+      <img class="ltbx_button_pre-order" src="./pre-order.png" alt="Pre-order">
+      <img class="ltbx_close" id="grow" src="./Lightbox_button_close.png" onclick="closeLightbox()" alt="Close">
   </section >
 
 </body>

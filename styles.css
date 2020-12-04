@@ -72,14 +72,14 @@ body {
   }
 }
 
-#container {
+.container {
   display: flex;
   width: 300px;
   height: 250px;
   overflow: hidden;
   align-self: flex-end;
 }
-.frame1 {
+.static-bg {
   position: absolute;
 }
 .frame1_trans {
@@ -119,7 +119,7 @@ body {
   position: absolute;
   animation: hideshow 200ms linear 2s;
 }
-.thisonemakesyousmaller {
+.frame2_shrink {
   animation: shrink 200ms linear 2.5s 1 forwards;
   transform-origin: -60px 50px;
 }
@@ -146,17 +146,17 @@ body {
   position: absolute;
   animation: appear 20ms linear 3.2s forwards;
 }
-.frame3_temp {
+.frame3_trans {
   z-index: 10;
   animation: disappear 20ms linear 7s forwards;
 }
-.frame4 {
+.frame4_dvd {
   position: absolute;
   opacity: 0;
   z-index: 10;
   animation: appear 20ms linear 7.1s forwards;
 }
-.button {
+.frame4_button {
   opacity: 0;
   z-index: 10;
   position: absolute;
@@ -164,47 +164,42 @@ body {
 }
 
 
-/* ---------- LIGHTBOX ---------- */
+/* --------------------- LIGHTBOX ---------------------- */
 
-.mylightbox {
+.ltbx {
   z-index: 10;
   flex-direction: unset;
   display: none;
+  position: relative;
 }
-.close {
+.ltbx_static {
   width: 90vw;
+  position: relative;
+}
+.ltbx_watchdogs {
   z-index: 15;
   position: absolute;
-}
-.watchdogs__lightbox {
   width: 90vw;
-  z-index: 15;
-  position: absolute;
+
+  /* width: 90vw; */
   animation: glitch, glitchUp, glitchDown, slowGlitch;
   animation-duration: 600ms, 200ms, 100ms, 3s;
   animation-delay: 4s, 9s, 10s, 2s;
   animation-iteration-count: 1, 1, 1, infinite;
   animation-fill-mode: forwards;
 }
-.button--pre-order {
+.ltbx_button_pre-order {
   z-index: 15;
-  width: 90vw;
   position: absolute;
+  width: 90vw;
+
+  /* width: 90vw; */
   animation: hideshow 3s linear infinite;
 }
-.lightbox--main {
+.ltbx_close {
+  z-index: 15;
+  position: absolute;
   width: 90vw;
+
+  /* width: 90vw; */
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
