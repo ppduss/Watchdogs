@@ -1,0 +1,200 @@
+body {
+  background-color: #cccccc;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+@keyframes shrink {
+  100% {
+    transform: scaleX(0.73) scaleY(0.73) ;
+  }
+}
+@keyframes hideshow {
+  0% { opacity: 0.2; }
+  50% { opacity: 1; }
+  100% { opacity: 0.2; }
+}
+@keyframes disappear {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 0; }
+}
+@keyframes appear {
+  0% { opacity: 0; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+@keyframes throb {
+  0% {
+    transform: scale(1)
+  }
+  0% {
+    transform: scale(1.01)
+  }
+}
+@keyframes glitch{
+  2%,64%{
+    transform: translate(2px,0) skew(0deg);
+  }
+  4%,60%{
+    transform: translate(-2px,0) skew(0deg);
+  }
+  62%{
+    transform: translate(0,0) skew(5deg); 
+  }
+}
+@keyframes glitchUp{
+  2%,64%{
+    transform: translate(2px,-2px);
+  }
+  4%,60%{
+    transform: translate(-2px,2px);
+  }
+  62%{
+    transform: translate(5px,-1px) skew(-1deg); 
+  }
+}
+@keyframes glitchDown{
+  2%,64%{
+    transform: translate(-2px,0);
+  }
+  4%,60%{
+    transform: translate(-2px,0);
+  }
+  62%{
+    transform: translate(-5px,5px) skew(15deg); 
+  }
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 250px;
+}
+.frame1 {
+  position: absolute;
+}
+.frame1_trans {
+  overflow: hidden;
+  animation: disappear 100ms linear 1200ms;
+  animation-fill-mode: forwards;
+
+}
+.frame1_black {
+  position: absolute;
+  /* position: fixed; */
+  justify-self: end;
+  z-index: 1;
+  overflow: hidden;
+}
+.frame1_txt {
+  flex-direction: column-reverse;
+  z-index: 1;
+  position: absolute;
+  animation: hideshow 100ms linear 2s;
+  animation-delay: 500ms;
+}
+.frame2_trans {
+  overflow: hidden; 
+  opacity: 0;
+  animation: appear, disappear;
+  animation-duration: 10ms;
+  animation-delay: 1500ms, 7s;
+  animation-fill-mode: forwards;
+}
+.frame2_face {
+  position: absolute;
+  /* position: fixed; */
+  justify-self: end;
+  z-index: 1;
+  overflow: hidden;
+}
+.frame2_message {
+  z-index: 1;
+  position: absolute;
+  animation: hideshow 200ms linear 2s;
+}
+.thisonemakesyousmaller {
+  animation: shrink 200ms linear 2.5s 1 forwards;
+  transform-origin: -60px 50px;
+}
+
+.frame3 {
+  z-index: 10;
+  opacity: 0;
+  position: absolute;
+  animation: appear 20ms linear 3.2s forwards;
+  animation-duration: 20ms;
+  animation-delay: 3.2;
+}
+.frame3_hacking {
+  position: absolute;
+  opacity: 0;
+  animation: glitch, glitchUp, glitchDown, appear;
+  animation-duration: 600ms, 200ms, 800ms, 20ms;
+  animation-delay: 4s, 5s, 6s, 4s;
+  animation-iteration-count: 2, 1, 1, 1;
+  animation-fill-mode: forwards;
+}
+.frame3_ubisoft {
+  opacity: 0;
+  position: absolute;
+  animation: appear 20ms linear 3.2s forwards;
+}
+.frame3_temp {
+  z-index: 10;
+  animation: disappear 20ms linear 7s forwards;
+}
+.frame4 {
+  position: absolute;
+  opacity: 0;
+  z-index: 10;
+  animation: appear 20ms linear 7.1s forwards;
+}
+.roll {
+  opacity: 0;
+  z-index: 10;
+  position: absolute;
+  animation: hideshow 3s linear 7s infinite forwards;
+}
+
+.white {
+  position: absolute;
+  z-index: 11;
+  border: 1px solid rgb(184, 69, 69);
+  opacity: 0.4;
+  /* animation: hideshow 2s linear infinite; */
+  position: absolute;
+}
+
+/* ---------- LIGHTBOX ---------- */
+
+.mylightbox {
+  z-index: 15;
+  /* opacity: 0.5; */
+  display: none;
+}
+.close {
+  z-index: 15;
+  position: absolute;
+}
+.watchdogs_lg {
+  z-index: 15;
+  position: absolute;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
