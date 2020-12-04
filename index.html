@@ -9,12 +9,11 @@
   <script>
 
     function openLightbox() {
-      document.getElementById("mylightbox").style.display = "contents";
+      document.getElementById("mylightbox").style.display = "inherit";
     };
     function closeLightbox() {
       document.getElementById("mylightbox").style.display = "none";
     };
-
   </script>
 </head>
 
@@ -38,13 +37,16 @@
     <img class="frame3_ubisoft" src="./ubisoft.png" alt="">
     <!-- <div class="frame4"></div> -->
     <img class="frame4" src="./frame4.png" alt="">
-    <img class="roll" src="./rollbutton.png" alt="">
+    <img class="button" src="./rollbutton.png" alt="">
   </section>
 
   <section class="mylightbox" id="mylightbox" onmouseout="timer = setTimeout(closeLightbox, 1000)" onmouseover="clearTimeout(timer)">
-    <img src="./lightbox_main.png" alt="">
-    <img class="watchdogs_lg" src="./watchdogs_lg.png" alt="">
-    <img class="close" src="./close.png" alt="">
+    <!-- <div class=""> -->
+      <img class="lightbox--main" src="./lightbox_main3.png" alt="">
+      <img class="watchdogs__lightbox" src="./watchdogs_lg.png" alt="">
+      <img class="button--pre-order" src="./pre-order.png" alt="">
+      <img class="close" id="grow" src="./close.png" alt="" onclick="closeLightbox()">
+    <!-- </div> -->
   </section >
 
 </body>
