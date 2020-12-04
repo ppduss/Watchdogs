@@ -1,166 +1,298 @@
 body {
   background-color: #cccccc;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
+@-webkit-keyframes shrink {
+  100% {
+    -webkit-transform: scaleX(0.73) scaleY(0.73) ;
+            transform: scaleX(0.73) scaleY(0.73) ;
+  }
+}
 @keyframes shrink {
   100% {
-    transform: scaleX(0.73) scaleY(0.73) ;
+    -webkit-transform: scaleX(0.73) scaleY(0.73) ;
+            transform: scaleX(0.73) scaleY(0.73) ;
   }
+}
+@-webkit-keyframes hideshow {
+  0% { opacity: 0.2; }
+  50% { opacity: 1; }
+  100% { opacity: 0.2; }
 }
 @keyframes hideshow {
   0% { opacity: 0.2; }
   50% { opacity: 1; }
   100% { opacity: 0.2; }
 }
+@-webkit-keyframes disappear {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 0; }
+}
 @keyframes disappear {
   0% { opacity: 1; }
   50% { opacity: 0.5; }
   100% { opacity: 0; }
+}
+@-webkit-keyframes appear {
+  0% { opacity: 0; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
 }
 @keyframes appear {
   0% { opacity: 0; }
   50% { opacity: 0.5; }
   100% { opacity: 1; }
 }
-@keyframes glitch{
+@-webkit-keyframes glitch{
   2%,64%{
-    transform: translate(2px,0) skew(0deg);
+    -webkit-transform: translate(2px,0) skew(0deg);
+            transform: translate(2px,0) skew(0deg);
   }
   4%,60%{
-    transform: translate(-2px,0) skew(0deg);
+    -webkit-transform: translate(-2px,0) skew(0deg);
+            transform: translate(-2px,0) skew(0deg);
   }
   62%{
-    transform: translate(0,0) skew(5deg); 
+    -webkit-transform: translate(0,0) skew(5deg);
+            transform: translate(0,0) skew(5deg); 
+  }
+}
+@keyframes glitch{
+  2%,64%{
+    -webkit-transform: translate(2px,0) skew(0deg);
+            transform: translate(2px,0) skew(0deg);
+  }
+  4%,60%{
+    -webkit-transform: translate(-2px,0) skew(0deg);
+            transform: translate(-2px,0) skew(0deg);
+  }
+  62%{
+    -webkit-transform: translate(0,0) skew(5deg);
+            transform: translate(0,0) skew(5deg); 
+  }
+}
+@-webkit-keyframes glitchUp{
+  2%,64%{
+    -webkit-transform: translate(2px,-2px);
+            transform: translate(2px,-2px);
+  }
+  4%,60%{
+    -webkit-transform: translate(-2px,2px);
+            transform: translate(-2px,2px);
+  }
+  62%{
+    -webkit-transform: translate(5px,-1px) skew(-1deg);
+            transform: translate(5px,-1px) skew(-1deg); 
   }
 }
 @keyframes glitchUp{
   2%,64%{
-    transform: translate(2px,-2px);
+    -webkit-transform: translate(2px,-2px);
+            transform: translate(2px,-2px);
   }
   4%,60%{
-    transform: translate(-2px,2px);
+    -webkit-transform: translate(-2px,2px);
+            transform: translate(-2px,2px);
   }
   62%{
-    transform: translate(5px,-1px) skew(-1deg); 
+    -webkit-transform: translate(5px,-1px) skew(-1deg);
+            transform: translate(5px,-1px) skew(-1deg); 
+  }
+}
+@-webkit-keyframes glitchDown{
+  2%,64%{
+    -webkit-transform: translate(-2px,0);
+            transform: translate(-2px,0);
+  }
+  4%,60%{
+    -webkit-transform: translate(-2px,0);
+            transform: translate(-2px,0);
+  }
+  62%{
+    -webkit-transform: translate(-5px,5px) skew(15deg);
+            transform: translate(-5px,5px) skew(15deg); 
   }
 }
 @keyframes glitchDown{
   2%,64%{
-    transform: translate(-2px,0);
+    -webkit-transform: translate(-2px,0);
+            transform: translate(-2px,0);
   }
   4%,60%{
-    transform: translate(-2px,0);
+    -webkit-transform: translate(-2px,0);
+            transform: translate(-2px,0);
   }
   62%{
-    transform: translate(-5px,5px) skew(15deg); 
+    -webkit-transform: translate(-5px,5px) skew(15deg);
+            transform: translate(-5px,5px) skew(15deg); 
+  }
+}
+@-webkit-keyframes slowGlitch{
+  1%,3%{
+    -webkit-transform: translate(-1px,0);
+            transform: translate(-1px,0);
+  }
+  2%,4%{
+    -webkit-transform: translate(-1px,0);
+            transform: translate(-1px,0);
+  }
+  5%{
+    -webkit-transform: translate(-2px,2px) skew(-3deg);
+            transform: translate(-2px,2px) skew(-3deg); 
+  }
+  6% {
+    -webkit-transform: none;
+            transform: none;
   }
 }
 @keyframes slowGlitch{
   1%,3%{
-    transform: translate(-1px,0);
+    -webkit-transform: translate(-1px,0);
+            transform: translate(-1px,0);
   }
   2%,4%{
-    transform: translate(-1px,0);
+    -webkit-transform: translate(-1px,0);
+            transform: translate(-1px,0);
   }
   5%{
-    transform: translate(-2px,2px) skew(-3deg); 
+    -webkit-transform: translate(-2px,2px) skew(-3deg);
+            transform: translate(-2px,2px) skew(-3deg); 
   }
   6% {
-    transform: none;
+    -webkit-transform: none;
+            transform: none;
   }
 }
 
 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 300px;
   height: 250px;
   overflow: hidden;
-  align-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 .static-bg {
   position: absolute;
 }
 .frame1_trans {
   overflow: hidden;
-  animation: disappear 100ms linear 1200ms;
-  animation-fill-mode: forwards;
+  -webkit-animation: disappear 100ms linear 1200ms;
+          animation: disappear 100ms linear 1200ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 .frame1_black {
   position: absolute;
-  justify-self: end;
+  -ms-grid-column-align: end;
+      justify-self: end;
   z-index: 1;
   overflow: hidden;
 }
 .frame1_txt {
-  flex-direction: column-reverse;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
   z-index: 1;
   position: absolute;
-  animation: hideshow 100ms linear 2s;
-  animation-delay: 500ms;
+  -webkit-animation: hideshow 100ms linear 2s;
+          animation: hideshow 100ms linear 2s;
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
 }
 .frame2_trans {
   overflow: hidden; 
   opacity: 0;
-  animation: appear, disappear;
-  animation-duration: 10ms;
-  animation-delay: 1500ms, 7s;
-  animation-fill-mode: forwards;
+  -webkit-animation: appear, disappear;
+          animation: appear, disappear;
+  -webkit-animation-duration: 10ms;
+          animation-duration: 10ms;
+  -webkit-animation-delay: 1500ms, 7s;
+          animation-delay: 1500ms, 7s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 .frame2_face {
   position: absolute;
-  justify-self: end;
+  -ms-grid-column-align: end;
+      justify-self: end;
   z-index: 1;
   overflow: hidden;
 }
 .frame2_message {
   z-index: 1;
   position: absolute;
-  animation: hideshow 200ms linear 2s;
+  -webkit-animation: hideshow 200ms linear 2s;
+          animation: hideshow 200ms linear 2s;
 }
 .frame2_shrink {
-  animation: shrink 200ms linear 2.5s 1 forwards;
-  transform-origin: -60px 50px;
+  -webkit-animation: shrink 200ms linear 2.5s 1 forwards;
+          animation: shrink 200ms linear 2.5s 1 forwards;
+  -webkit-transform-origin: -60px 50px;
+      -ms-transform-origin: -60px 50px;
+          transform-origin: -60px 50px;
 }
 
 .frame3 {
   z-index: 10;
   opacity: 0;
   position: absolute;
-  animation: appear 20ms linear 3.2s forwards;
-  animation-duration: 20ms;
-  animation-delay: 3.2;
+  -webkit-animation: appear 20ms linear 3.2s forwards;
+          animation: appear 20ms linear 3.2s forwards;
+  -webkit-animation-duration: 20ms;
+          animation-duration: 20ms;
+  -webkit-animation-delay: 3.2;
+          animation-delay: 3.2;
 }
 .frame3_hacking {
   position: absolute;
   opacity: 0;
-  animation: glitch, glitchUp, glitchDown, appear;
-  animation-duration: 600ms, 200ms, 800ms, 20ms;
-  animation-delay: 4s, 5s, 6s, 4s;
-  animation-iteration-count: 2, 1, 1, 1;
-  animation-fill-mode: forwards;
+  -webkit-animation: glitch, glitchUp, glitchDown, appear;
+          animation: glitch, glitchUp, glitchDown, appear;
+  -webkit-animation-duration: 600ms, 200ms, 800ms, 20ms;
+          animation-duration: 600ms, 200ms, 800ms, 20ms;
+  -webkit-animation-delay: 4s, 5s, 6s, 4s;
+          animation-delay: 4s, 5s, 6s, 4s;
+  -webkit-animation-iteration-count: 2, 1, 1, 1;
+          animation-iteration-count: 2, 1, 1, 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 .frame3_ubisoft {
   opacity: 0;
   position: absolute;
-  animation: appear 20ms linear 3.2s forwards;
+  -webkit-animation: appear 20ms linear 3.2s forwards;
+          animation: appear 20ms linear 3.2s forwards;
 }
 .frame3_trans {
   z-index: 10;
-  animation: disappear 20ms linear 7s forwards;
+  -webkit-animation: disappear 20ms linear 7s forwards;
+          animation: disappear 20ms linear 7s forwards;
 }
 .frame4_dvd {
   position: absolute;
   opacity: 0;
   z-index: 10;
-  animation: appear 20ms linear 7.1s forwards;
+  -webkit-animation: appear 20ms linear 7.1s forwards;
+          animation: appear 20ms linear 7.1s forwards;
 }
 .frame4_button {
   opacity: 0;
   z-index: 10;
   position: absolute;
-  animation: hideshow 3s linear 7s infinite forwards;
+  -webkit-animation: hideshow 3s linear 7s infinite forwards;
+          animation: hideshow 3s linear 7s infinite forwards;
 }
 
 
@@ -168,38 +300,41 @@ body {
 
 .ltbx {
   z-index: 10;
-  flex-direction: unset;
+  -webkit-box-orient: unset;
+  -webkit-box-direction: unset;
+      -ms-flex-direction: unset;
+          flex-direction: unset;
   display: none;
-  position: relative;
+  position: absolute;
 }
 .ltbx_static {
   width: 90vw;
-  position: relative;
+  position: absolute;
 }
 .ltbx_watchdogs {
   z-index: 15;
   position: absolute;
   width: 90vw;
-
-  /* width: 90vw; */
-  animation: glitch, glitchUp, glitchDown, slowGlitch;
-  animation-duration: 600ms, 200ms, 100ms, 3s;
-  animation-delay: 4s, 9s, 10s, 2s;
-  animation-iteration-count: 1, 1, 1, infinite;
-  animation-fill-mode: forwards;
+  -webkit-animation: glitch, glitchUp, glitchDown, slowGlitch;
+          animation: glitch, glitchUp, glitchDown, slowGlitch;
+  -webkit-animation-duration: 600ms, 200ms, 100ms, 3s;
+          animation-duration: 600ms, 200ms, 100ms, 3s;
+  -webkit-animation-delay: 4s, 9s, 10s, 2s;
+          animation-delay: 4s, 9s, 10s, 2s;
+  -webkit-animation-iteration-count: 1, 1, 1, infinite;
+          animation-iteration-count: 1, 1, 1, infinite;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 .ltbx_button_pre-order {
   z-index: 15;
   position: absolute;
   width: 90vw;
-
-  /* width: 90vw; */
-  animation: hideshow 3s linear infinite;
+  -webkit-animation: hideshow 3s linear infinite;
+          animation: hideshow 3s linear infinite;
 }
 .ltbx_close {
   z-index: 15;
   position: absolute;
   width: 90vw;
-
-  /* width: 90vw; */
 }
