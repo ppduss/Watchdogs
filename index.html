@@ -8,40 +8,46 @@
 </head>
 
 <body>
-  <section class="container" onmouseenter="timer = setTimeout(openLightbox, 3000)" onmouseleave="clearTimeout(timer)">
-    <img class="static-bg"src="./resources/main.png" alt="Main">
-    <div class="frame1_trans">
-      <img class="frame1_black" src="./resources/Frame1_Rectangle.png" alt="Rectangle">
-      <img class="frame1_txt" src="./resources/Frame1_txt.png" alt="Txt">  
-    </div>
-    <div class="frame2_shrink">
-      <div class="frame2_trans">
-        <img class="frame2_face" src="./resources/Frame2_face.png" alt="Face">
-        <img class="frame2_message" src="./resources/Frame2_message.png" alt="Message">  
+  <div id="overlay"></div>
+    <section class="container" onmouseenter="timer = setTimeout(openLightbox, 500)" onmouseleave="clearTimeout (timer)">
+      <img class="static-bg"src="./resources/main.png" alt="Main">
+      <div class="frame1_trans">
+        <img class="frame1_black" src="./resources/Frame1_Rectangle.png" alt="Rectangle">
+        <img class="frame1_txt" src="./resources/Frame1_txt.png" alt="Txt">  
       </div>
-    </div>
-    <div class="frame3_trans">
-      <img class="frame3" src="./resources/Frame3_watchdogs.png" alt="Watchdogs">
-      <img class="frame3_hacking" src="./resources/Frame3_hacking.png" alt="Hacking">
-    </div>
-    <img class="frame3_ubisoft" src="./resources/Frame3_ubisoft.png" alt="Ubisoft">
-    <img class="frame4_dvd" src="./resources/Frame4_DVD.png" alt="DVD">
-    <img class="frame4_button" src="./resources/Frame4_button.png" alt="Roll Over">
-  </section>
+      <div class="frame2_shrink">
+        <div class="frame2_trans">
+          <img class="frame2_face" src="./resources/Frame2_face.png" alt="Face">
+          <img class="frame2_message" src="./resources/Frame2_message.png" alt="Message">  
+        </div>
+      </div>
+      <div class="frame3_trans">
+        <img class="frame3" src="./resources/Frame3_watchdogs.png" alt="Watchdogs">
+        <img class="frame3_hacking" src="./resources/Frame3_hacking.png" alt="Hacking">
+      </div>
+      <img class="frame3_ubisoft" src="./resources/Frame3_ubisoft.png" alt="Ubisoft">
+      <img class="frame4_dvd" src="./resources/Frame4_DVD.png" alt="DVD">
+      <img class="frame4_button" src="./resources/Frame4_button.png" alt="Roll Over">
+    </section>
 
-  <section class="ltbx" id="mylightbox" onmouseleave="timer = setTimeout(closeLightbox, 1000)" onmouseenter="clearTimeout(timer)">
-      <img class="ltbx_static" src="./resources/lightbox_main3.png" alt="Lightbox main">
-      <img class="ltbx_watchdogs" src="./resources/watchdogs_lg.png" alt="Watchdogs">
-      <img class="ltbx_button_pre-order" src="./resources/pre-order.png" alt="Pre-order">
-      <img class="ltbx_close" id="grow" src="./resources/Lightbox_button_close.png" onclick="closeLightbox()" alt="Close">
-  </section >
+    <section class="ltbx" id="mylightbox">
+        <img class="ltbx_static" src="./resources/lightbox_main3.png" alt="Lightbox main">
+        <img class="ltbx_watchdogs" src="./resources/watchdogs_lg.png" alt="Watchdogs">
+        <img class="ltbx_button_pre-order" src="./resources/pre-order.png" alt="Pre-order">
+        <img class="ltbx_close" id="grow" src="./resources/Lightbox_button_close.png" alt="Close">
+        <div id="button_frame" onclick="closeLightbox()"></div>
 
+        </img>
+        
+    </section >
   <script>
     function openLightbox() {
       document.getElementById("mylightbox").style.display = "inherit";
+      document.getElementById("overlay").style.display = "block";
     };
     function closeLightbox() {
       document.getElementById("mylightbox").style.display = "none";
+      document.getElementById("overlay").style.display = "none";
     };
   </script>
 </body>

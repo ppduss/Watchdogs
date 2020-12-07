@@ -172,6 +172,19 @@ body {
   }
 }
 
+#overlay {
+  position: fixed;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -300,21 +313,37 @@ body {
 
 .ltbx {
   z-index: 10;
-  -webkit-box-orient: unset;
+  /* -webkit-box-orient: unset;
   -webkit-box-direction: unset;
       -ms-flex-direction: unset;
-          flex-direction: unset;
+          flex-direction: unset; */
   display: none;
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100vw;
+  
 }
 .ltbx_static {
-  width: 90vw;
   position: absolute;
+  z-index: 15;
+  /* margin-left: 10%;
+  margin-right: 10%;
+  width: 80%; */
+  max-width: 100vw;
+
+
 }
 .ltbx_watchdogs {
   z-index: 15;
-  position: absolute;
-  width: 90vw;
+  /* position: fixed; */
+  /* width: 80vw; */
+      /* margin-left: 10%;
+  margin-right: 10%;
+  width: 80%; */
+  max-width: 100vw;
+
   -webkit-animation: glitch, glitchUp, glitchDown, slowGlitch;
           animation: glitch, glitchUp, glitchDown, slowGlitch;
   -webkit-animation-duration: 600ms, 200ms, 100ms, 3s;
@@ -329,12 +358,36 @@ body {
 .ltbx_button_pre-order {
   z-index: 15;
   position: absolute;
-  width: 90vw;
+  max-width: 100vw;
+  
+  /* margin-left: 10%;
+  margin-right: 10%;
+  width: 80%; */
+
   -webkit-animation: hideshow 3s linear infinite;
           animation: hideshow 3s linear infinite;
+          
 }
 .ltbx_close {
   z-index: 15;
   position: absolute;
-  width: 90vw;
+  max-width: 100vw;
+  
+  /* margin-left: 10%;
+  margin-right: 10%;
+  width: 80%; */
+}
+
+#button_frame {
+  position: absolute;
+  border: 2px solid red;
+  z-index: 20;
+  width: 100px;
+  height:50px;
+  max-width: 100vw;
+  
+  /* margin-left: 10%;
+  margin-right: 10%;
+  width: 80%; */
+
 }
